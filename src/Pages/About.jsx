@@ -46,7 +46,7 @@ gsap.from(splitSection1.lines, {
   ease: "power3.out",
 });
 
-// Text scroll-in (fade + rise)
+
 gsap.fromTo(
   section1TextRef.current,
   { y: 80, opacity: 0 },
@@ -63,7 +63,7 @@ gsap.fromTo(
   }
 );
 
-// Text scroll-out (fade + rise)
+
 gsap.to(section1TextRef.current, {
   scrollTrigger: {
     trigger: section1TextRef.current,
@@ -76,7 +76,6 @@ gsap.to(section1TextRef.current, {
   ease: "power2.out",
 });
 
-// Image reveal using clipPath like phase1/2
 gsap.from(section1ImageRef.current, {
   scrollTrigger: {
     trigger: section1ImageRef.current,
@@ -88,7 +87,7 @@ gsap.from(section1ImageRef.current, {
   ease: "power2.out",
 });
 
-// 2. Scroll-in animation (fade in + rise)
+
 gsap.fromTo(
   section1ImageRef.current,
   { y: 100, opacity: 0 },
@@ -105,7 +104,7 @@ gsap.fromTo(
   }
 );
 
-// 3. Scroll-out animation (fade out + rise)
+
 gsap.to(section1ImageRef.current, {
   scrollTrigger: {
     trigger: section1ImageRef.current,
@@ -127,11 +126,11 @@ gsap.to(section1ImageRef.current, {
         scrub: 0.5,
         
       },
-      y: -300, // adjust for desired scroll distance
+      y: -300, 
       ease: 'none',
     });
 
-    // Split reveal animation for text
+
     const split = new SplitType(phase1TextRef.current, { types: "lines" });
     gsap.from(split.lines, {
       scrollTrigger: {
@@ -206,7 +205,7 @@ gsap.from(phase2ImageRef.current, {
   duration: 1.5,
   ease: 'power2.out',
 });
-// Text scroll-up + fade in/out
+
 gsap.fromTo(
   phase2TextRef.current,
   { y: 80, opacity: 0 },
@@ -249,10 +248,10 @@ gsap.to(phase2TextRef.current, {
   opacity: 0,
   y: -800,
 });
-  // === Phase 3 Animations ===
+
 const split3 = new SplitType(window.phase3TextRef, { types: 'lines' });
 
-// Text line-by-line reveal
+
 gsap.from(split3.lines, {
   scrollTrigger: {
     trigger: window.phase3TextRef,
@@ -266,7 +265,7 @@ gsap.from(split3.lines, {
   ease: 'power3.out',
 });
 
-// Image reveal using clipPath
+
 gsap.from(window.phase3ImageRef, {
   scrollTrigger: {
     trigger: window.phase3ImageRef,
@@ -278,7 +277,7 @@ gsap.from(window.phase3ImageRef, {
   ease: 'power2.out',
 });
 
-// Image scroll-in animation (fade in + rise)
+
 gsap.fromTo(
   window.phase3ImageRef,
   { y: 100, opacity: 0 },
@@ -295,7 +294,7 @@ gsap.fromTo(
   }
 );
 
-// Text scroll-in animation (fade in + rise)
+
 gsap.fromTo(
   window.phase3TextRef,
   { y: 80, opacity: 0 },
@@ -312,7 +311,7 @@ gsap.fromTo(
   }
 );
 
-// SLOW fade-out animation for text
+
 gsap.to(window.phase3TextRef, {
   scrollTrigger: {
     trigger: window.phase3TextRef,
@@ -325,7 +324,7 @@ gsap.to(window.phase3TextRef, {
   ease: 'power2.out',
 });
 
-// SLOW fade-out animation for image
+
 gsap.to(window.phase3ImageRef, {
   scrollTrigger: {
     trigger: window.phase3ImageRef,
@@ -338,7 +337,6 @@ gsap.to(window.phase3ImageRef, {
   ease: 'power2.out',
 });
 
-// Rolling text slow scroll
 gsap.to(window.phase3RollingRef, {
   scrollTrigger: {
     trigger: window.phase3RollingRef,
@@ -446,7 +444,7 @@ gsap.to(window.phase4RollingRef, {
         UNBREAKABLE 
       </div>
 
-      {/* ===== Section 1: Intro with Animated Wave ===== */}
+
       <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-20">
   {/* Background Wave */}
   <div className="absolute top-0 left-0 w-full z-0 overflow-hidden">
@@ -463,10 +461,10 @@ gsap.to(window.phase4RollingRef, {
     </svg>
   </div>
 
-  {/* Left: Text */}
+
   <div
   className="relative z-10 text-left md:w-1/2 mt-40 px-4"
-  ref={section1TextRef} // ✅ correct
+  ref={section1TextRef} 
 >
   <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
     David Goggins
@@ -479,7 +477,7 @@ gsap.to(window.phase4RollingRef, {
 </div>
 
 
-  {/* Right: Image */}
+
   <div className="relative z-10 mt-10 md:mt-40 md:w-1/2 flex justify-center" ref={section1ImageRef}>
     <img
       src={Aboutpfp}
@@ -490,9 +488,9 @@ gsap.to(window.phase4RollingRef, {
 </section>
 
 
-      {/* ===== Section 2: Phase 1 ===== */}
+
       <section className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-24 gap-16 py-32">
-        {/* Left: Text */}
+    
         <div className="md:w-1/2" ref={phase1TextRef}>
           <h2 className="text-4xl md:text-5xl text-yellow-300 font-bold mb-6">Phase 1: Origins</h2>
           <p className="text-lg leading-relaxed max-w-xl">
@@ -507,7 +505,7 @@ gsap.to(window.phase4RollingRef, {
           </p>
         </div>
 
-        {/* Right: Image */}
+  
         <div
           ref={phase1ImageRef}
           className="md:w-1/2 overflow-hidden rounded-xl shadow-2xl max-w-md"
@@ -519,7 +517,7 @@ gsap.to(window.phase4RollingRef, {
           />
         </div>
       </section>
-      {/* === Section 3: Phase 2 === */}
+     
 <section className="relative z-10 flex flex-col md:flex-row-reverse items-center justify-center min-h-screen px-6 md:px-24 gap-16 py-32 bg-black text-gray-100 overflow-hidden">
 
 
@@ -543,7 +541,7 @@ gsap.to(window.phase4RollingRef, {
   />
 </div>
 
-{/* Left: Text */}
+
 <div className="md:w-1/2" ref={phase2TextRef}>
   <h2 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-400">
     Phase 2: The SEAL Trials
@@ -555,7 +553,7 @@ gsap.to(window.phase4RollingRef, {
 </section>
 <section className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-24 gap-16 py-32 bg-black text-gray-100 overflow-hidden">
 
-  {/* Left Vertical Rolling Text */}
+ 
   <div
     ref={el => (window.phase3RollingRef = el)}
     className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[4vw] font-black tracking-tight text-yellow-300 opacity-[0.3] whitespace-nowrap z-0 rotate-180 pointer-events-none"
@@ -564,7 +562,7 @@ gsap.to(window.phase4RollingRef, {
     THEY DON'T KNOW ME SON
   </div>
 
-  {/* Left: Text */}
+
   <div className="md:w-1/2" ref={el => (window.phase3TextRef = el)}>
     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-400">
       Phase 3: Relentless Resolve
@@ -574,7 +572,7 @@ gsap.to(window.phase4RollingRef, {
     </p>
   </div>
 
-  {/* Right: Image */}
+
   <div
     ref={el => (window.phase3ImageRef = el)}
     className="md:w-1/2 overflow-hidden rounded-xl shadow-2xl max-w-md"
@@ -591,7 +589,6 @@ gsap.to(window.phase4RollingRef, {
   id="phase4"
   className="relative flex flex-col md:flex-row items-center justify-center px-6 md:px-20 py-16 md:py-24 gap-10 bg-black overflow-hidden"
 >
-  {/* Rolling Background Text */}
   <div
     ref={el => (window.phase4RollingRef = el)}
     className="absolute top-8 left-0 w-full text-center text-yellow-400 text-4xl sm:text-6xl md:text-9xl font-extrabold whitespace-nowrap tracking-wide opacity-40 pointer-events-none select-none"
@@ -599,7 +596,7 @@ gsap.to(window.phase4RollingRef, {
     DON'T BE MEDIOCRE DON'T BE MEDIOCRE DON'T BE MEDIOCRE DON'T BE MEDIOCRE
   </div>
 
-  {/* Text Section */}
+
   <div
     ref={el => (window.phase4TextRef = el)}
     className="z-10 md:w-1/2 text-left"
@@ -614,7 +611,6 @@ gsap.to(window.phase4RollingRef, {
     </p>
   </div>
 
-  {/* Image Section */}
   <div className="z-10 md:w-1/2 flex justify-center">
     <img
       ref={el => (window.phase4ImageRef = el)}
@@ -625,7 +621,7 @@ gsap.to(window.phase4RollingRef, {
   </div>
 </section>
 
-{/* === Button BELOW the Section === */}
+
 <div className="w-full flex justify-center mt-10 mb-16 px-6">
 <Link
   to="/AchievementsTimeline"
@@ -637,7 +633,7 @@ gsap.to(window.phase4RollingRef, {
 </div>
     
     <footer className="bg-black text-white py-12 px-6 text-center">
-    {/* Navigation Links */}
+
     <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-semibold mb-6">
       <a href="/" className="hover:text-yellow-400">HOME</a>
       <a href="/about" className="hover:text-yellow-400">ABOUT</a>
@@ -646,12 +642,12 @@ gsap.to(window.phase4RollingRef, {
       <a href="/4x4x48" className="hover:text-yellow-400">4X4X48</a>
     </div>
 
-    {/* Name */}
+ 
     <h2 className="text-lg md:text-xl font-bold tracking-[0.3em] text-gray-300 mb-4">
       D A V I D&nbsp;&nbsp;G O G G I N S
     </h2>
 
-    {/* Social Icons */}
+
     <div className="flex justify-center gap-4 text-xl text-blue-400 mb-6">
       <a href="https://www.instagram.com/davidgoggins/" target="_blank" rel="noreferrer">
         <FaInstagram />
@@ -664,7 +660,7 @@ gsap.to(window.phase4RollingRef, {
       </a>
     </div>
 
-    {/* Bottom Links */}
+
     <div className="text-xs text-gray-400 space-x-2">
       <span>© 2024 Goggins, LLC. All Rights Reserved. made from react by Shlok Thapa</span>
       <span>|</span>

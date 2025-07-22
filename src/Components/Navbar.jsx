@@ -50,7 +50,7 @@ function Navbar() {
           ))}
         </div>
 
-        {/* Hamburger Icon */}
+     
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
@@ -58,7 +58,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown with smooth animation */}
+     
       <div
         className={`
           flex flex-col items-center overflow-hidden transition-all duration-500 ease-in-out

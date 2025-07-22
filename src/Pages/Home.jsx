@@ -11,9 +11,9 @@ const Home = () => {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
 
-      {/* === Hero Section === */}
+
       <section className="relative min-h-screen flex items-center justify-center text-center px-6 py-24 md:py-80 overflow-hidden">
-        {/* Background with parallax effect */}
+
         <div
           className="
             absolute inset-0 
@@ -30,7 +30,7 @@ const Home = () => {
 
         <div className="absolute inset-0 bg-black/60 z-10"></div>
 
-        {/* Hero Text */}
+
         <div className="relative z-20 flex flex-col items-center">
           <TypeAnimation
             sequence={['UNLEASH', 1000, 'ENDURE', 1000, 'EVOLVE', 1000]}
@@ -57,7 +57,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* === Section 2 === */}
+
       <section className="relative min-h-[80vh] sm:min-h-screen py-56 px-6 md:px-16 overflow-hidden">
         <div
           className="
@@ -93,7 +93,6 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* === Section 3 === */}
       <section className="relative min-h-[80vh] sm:min-h-screen py-28 px-6 md:px-16 overflow-hidden">
         <div
           className="
@@ -135,7 +134,7 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* === Quote Section === */}
+     
       <section className="w-full bg-gray-300 py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl md:text-4xl font-semibold italic text-black">
@@ -148,7 +147,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* === Section 4: Social Media === */}
+
       <section className="relative min-h-[80vh] px-6 py-20 flex items-center overflow-hidden">
         <div
           className="
@@ -231,7 +230,7 @@ const Home = () => {
       </div>
 
       <footer className="bg-black text-white py-12 px-6 text-center">
-    {/* Navigation Links */}
+
     <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-semibold mb-6">
       <a href="/" className="hover:text-yellow-400">HOME</a>
       <a href="/about" className="hover:text-yellow-400">ABOUT</a>
@@ -240,12 +239,11 @@ const Home = () => {
       <a href="/4x4x48" className="hover:text-yellow-400">4X4X48</a>
     </div>
 
-    {/* Name */}
+
     <h2 className="text-lg md:text-xl font-bold tracking-[0.3em] text-gray-300 mb-4">
       D A V I D&nbsp;&nbsp;G O G G I N S
     </h2>
 
-    {/* Social Icons */}
     <div className="flex justify-center gap-4 text-xl text-blue-400 mb-6">
       <a href="https://www.instagram.com/davidgoggins/" target="_blank" rel="noreferrer">
         <FaInstagram />
@@ -258,9 +256,9 @@ const Home = () => {
       </a>
     </div>
 
-    {/* Bottom Links */}
+  
     <div className="text-xs text-gray-400 space-x-2">
-      <span>© 2024 Goggins, LLC. All Rights Reserved.</span>
+      <span>© 2024 Goggins,Made with ❤️& React by Shlok Thapa LLC. All Rights Reserved.</span>
       <span>|</span>
       <a href="/privacy-policy" className="hover:text-yellow-500">Privacy Policy</a>
       <span>|</span>

@@ -119,12 +119,12 @@ const removeFromCart = (productId) => {
     const item = prev.find((i) => i.id === productId);
 
     if (item.qty > 1) {
-      // Decrease quantity if more than one
+  
       return prev.map((i) =>
         i.id === productId ? { ...i, qty: i.qty - 1 } : i
       );
     } else {
-      // Remove item if only one left
+      
       return prev.filter((i) => i.id !== productId);
     }
   });
@@ -170,7 +170,7 @@ const removeFromCart = (productId) => {
   <div className="md:flex hidden items-center space-x-6">
    
 
-    {/* Currency dropdown */}
+
     <div className="relative">
       <button
         onClick={() => setShowCurrencyDropdown(!showCurrencyDropdown)}
@@ -198,7 +198,7 @@ const removeFromCart = (productId) => {
       )}
     </div>
 
-    {/* Cart */}
+
     <div className="relative ml-4">
       <button onClick={() => setShowCart(true)} className="text-white relative">
         🛒
@@ -211,7 +211,7 @@ const removeFromCart = (productId) => {
     </div>
   </div>
 
-  {/* Mobile Menu Icon */}
+
   <div className="md:hidden">
     <Menu className="w-6 h-6 text-white cursor-pointer" onClick={() => setShowMenu(true)} />
   </div>
@@ -225,7 +225,7 @@ const removeFromCart = (productId) => {
           Official Goggins Gear
         </h2>
 
-        {/* Product Grid */}
+       
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {products.map((product, index) => {
   const ref = useRef(null);
@@ -261,7 +261,7 @@ const removeFromCart = (productId) => {
 >
   &times;
 </button>
-{/* Product Modal */}
+
 <AnimatePresence>
   {selectedProduct && (
     <motion.div
@@ -278,7 +278,7 @@ const removeFromCart = (productId) => {
         exit={{ scale: 0.8, opacity: 0 }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close Button */}
+
         <button
           onClick={() => setSelectedProduct(null)}
           className="absolute top-2 right-4 text-gray-400 hover:text-yellow-400 text-xl"
@@ -297,7 +297,7 @@ const removeFromCart = (productId) => {
         </p>
         <p className="text-sm text-gray-300 mb-4">Available in your region</p>
 
-        {/* Add to Cart Button */}
+ 
         <button
           onClick={() => {
             addToCart(selectedProduct);
@@ -314,7 +314,6 @@ const removeFromCart = (productId) => {
 
               
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {showMenu && (
           <motion.div
@@ -340,7 +339,7 @@ const removeFromCart = (productId) => {
           </motion.div>
         )}
       </AnimatePresence>
-      {/* Cart Sidebar */}
+
 <AnimatePresence>
   {showCart && (
     <motion.div
@@ -410,13 +409,13 @@ const removeFromCart = (productId) => {
   </h2>
 
   <div className="flex justify-center gap-4 text-2xl text-blue-400 mb-6">
-    <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition">
+    <a href="https://www.instagram.com/davidgoggins" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition">
       <FaInstagram />
     </a>
-    <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition">
+    <a href="https://www.facebook.com/iamdavidgoggins/" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition">
       <FaFacebookF />
     </a>
-    <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition">
+    <a href="https://x.com/davidgoggins?lang=en" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition">
       <FaTwitter />
     </a>
   </div>

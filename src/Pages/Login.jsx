@@ -69,7 +69,7 @@ const Login = () => {
             <input
               type="password"
               id="password"
-              placeholder="••••••••"
+              placeholder="********"
               className="mt-1 w-full px-4 py-2 bg-black/40 border-none rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
             />
           </div>

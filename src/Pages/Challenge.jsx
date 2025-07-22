@@ -41,13 +41,35 @@ const ChallengeBanner = () => {
       
       </div>
 
-      {/* Bottom Text */}
+      
       <div className="w-full py-6 bg-white text-center">
         <p className="text-black text-sm md:text-base font-semibold tracking-wide uppercase">
         <p className="text-black text-sm md:text-base font-semibold tracking-wide uppercase">
-  <Link to="/certificate" className="hover:text-yellow-500 transition">
-    announcement to come
-  </Link>
+        <Link
+  to="/certificate"
+  className="
+    inline-block
+    bg-yellow-400
+    hover:bg-yellow-500
+    text-black
+    font-bold
+    text-center
+    py-3
+    px-6
+    rounded-lg
+    shadow-md
+    transition
+    duration-300
+    ease-in-out
+    focus:outline-none
+    focus:ring-2
+    focus:ring-yellow-300
+    focus:ring-offset-2
+    focus:ring-offset-black
+  "
+>
+  announcement to come
+</Link>
 </p>
         </p>
       </div>
