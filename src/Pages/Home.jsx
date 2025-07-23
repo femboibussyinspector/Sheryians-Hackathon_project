@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
 import AnimatedLink from '../assets/LinkButton';
 import HeroImage from '../assets/Section-4.jpg';
-import Section2Image from '../assets/Section-2.jpg';
+import Section2Image from '..assets/section-2.jpg';
 import Section3Image from '../assets/Section-3.jpg';
 import Section4Image from '../assets/Section-5.jpg';
 import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
