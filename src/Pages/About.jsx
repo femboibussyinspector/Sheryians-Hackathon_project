@@ -312,31 +312,27 @@ gsap.fromTo(
 );
 
 
-gsap.to(window.phase3TextRef, {
+gsap.to(window.phase3TextRef.current, { 
   scrollTrigger: {
-    trigger: window.phase3TextRef,
-    start: 'top 1%',
-    end: 'bottom -100%',
+    trigger: window.phase3TextRef.current,
+    start: 'top 20%',
+    end: 'bottom top',
     scrub: true,
   },
   opacity: 0,
   y: -40,
-  ease: 'power2.out',
 });
 
-
-gsap.to(window.phase3ImageRef, {
+gsap.to(window.phase3ImageRef.current, {
   scrollTrigger: {
-    trigger: window.phase3ImageRef,
-    start: 'top 10%',
-    end: 'bottom -100%',
+    trigger: window.phase3ImageRef.current,
+    start: 'top 20%', // Much safer value
+    end: 'bottom top',
     scrub: true,
   },
   opacity: 0,
   y: -50,
-  ease: 'power2.out',
 });
-
 gsap.to(window.phase3RollingRef, {
   scrollTrigger: {
     trigger: window.phase3RollingRef,
