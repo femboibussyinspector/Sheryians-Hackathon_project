@@ -1,4 +1,4 @@
-// src/Components/Navbar.jsx
+
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -10,9 +10,9 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 100) { // Only hide after scrolling down a bit
+    if (window.scrollY > lastScrollY && window.scrollY > 100) 
       setShowNavbar(false);
-    } else {
+     else {
       setShowNavbar(true);
     }
     setLastScrollY(window.scrollY);
@@ -32,14 +32,14 @@ function Navbar() {
         ${showNavbar ? 'translate-y-0' : '-translate-y-full'}
       `}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* --- CHANGE: Centered container for content --- */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 text-xl font-bold text-white">
-            {/* You can add a logo or brand name here */}
+      
             <Link to="/">GOGGINS</Link>
           </div>
 
-          {/* Desktop Menu */}
+    
           <div className="hidden md:flex space-x-6">
             {['Home', 'About', 'Shop', '4X4X48'].map((item) => (
               <Link
@@ -54,7 +54,6 @@ function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
               {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -63,7 +62,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+   
       <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'} bg-black/50 backdrop-blur-xl`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
           {['Home', 'About', 'Shop', '4X4X48'].map((item) => (

@@ -109,7 +109,7 @@ const ChallengeCertificate = () => {
   <a href="/about" className="hover:text-yellow-400">ABOUT</a>
   <a href="/AchievementsTimeline" className="hover:text-yellow-400">ACHIEVEMENTS</a>
   <a href="/shop" className="hover:text-yellow-400">SHOP</a>
-  <a href="/4x4x48" className="hover:text-yellow-400">4X4X48</a>
+  <a href="/4x4x48" className="hover:text-yellow-300">4X4X48</a>
 </div>
 
 

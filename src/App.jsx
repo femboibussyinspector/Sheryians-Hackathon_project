@@ -14,6 +14,7 @@ import ChallengeCertificate from './Pages/ChallengeCertificate';
 import AchievementsTimeline from './Pages/AchievementsTimeline';
 import Shop from './Pages/Shop';
 import ChallengeBanner from './Pages/Challenge';
+import { LogIn } from 'lucide-react';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
 
           <Route index element={<Home />} /> 
           <Route path="about" element={<About />} />
+          <Route path="login" element={<LogIn />} />
           <Route path="4X4X48" element={<ChallengeBanner />} />
           <Route path="achievementstimeline" element={<AchievementsTimeline />} />
           <Route path="shop" element={<Shop />} />
