@@ -3,6 +3,7 @@ import Loginimage from './Login-page.jpg';
 import { useEffect, useState } from 'react'; 
 import quotes from './Quotes';
 import Navbar from '../Components/Navbar';
+import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 const Login = () => {
   const [quote, setQuote] = useState('');
 
