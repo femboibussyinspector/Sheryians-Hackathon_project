@@ -153,6 +153,7 @@ const removeFromCart = (productId) => {
   };
 
   return (
+    <div>
     <div
       className="relative min-h-screen px-4 pt-28 pb-20 overflow-hidden text-white"
       style={{
@@ -393,7 +394,7 @@ const removeFromCart = (productId) => {
     </motion.div>
   )}
 </AnimatePresence>
-
+</div>
 <footer className="bg-black text-white py-12 px-6 text-center">
 
 <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-semibold mb-6">
@@ -433,7 +434,6 @@ const removeFromCart = (productId) => {
   <a href="/accessibility" className="hover:text-yellow-500">Accessibility Statement</a>
 </div>
 </footer>
-
 </div>
 
   );
