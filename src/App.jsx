@@ -1,5 +1,3 @@
-// src/App.jsx (The new, cleaner version)
-
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
