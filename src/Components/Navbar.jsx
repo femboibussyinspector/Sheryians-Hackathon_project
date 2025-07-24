@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -41,7 +39,7 @@ function Navbar() {
 
     
           <div className="hidden md:flex space-x-6">
-            {['Home', 'About', 'Shop', '4X4X48'].map((item) => (
+            {['Home', 'About', 'Shop','Login', '4X4X48'].map((item) => (
               <Link
                 key={item}
                 to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
@@ -65,7 +63,7 @@ function Navbar() {
    
       <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'} bg-black/50 backdrop-blur-xl`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-          {['Home', 'About', 'Shop', '4X4X48'].map((item) => (
+          {['Home', 'About', 'Shop','Login', '4X4X48'].map((item) => (
             <Link
               key={item}
               to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}

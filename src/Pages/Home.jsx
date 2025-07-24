@@ -234,6 +234,7 @@ const Home = () => {
     <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-semibold mb-6">
       <a href="/" className="hover:text-yellow-400">HOME</a>
       <a href="/about" className="hover:text-yellow-400">ABOUT</a>
+      <a href="/login" className="hover:text-yellow-400">LOGIN</a>
       <a href="/AchievementsTimeline" className="hover:text-yellow-400">ACHIEVEMENTS</a>
       <a href="/shop" className="hover:text-yellow-400">SHOP</a>
       <a href="/4x4x48" className="hover:text-yellow-400">4X4X48</a>
