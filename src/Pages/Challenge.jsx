@@ -79,6 +79,7 @@ const ChallengeBanner = () => {
 <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-semibold mb-6">
   <a href="/" className="hover:text-yellow-400">HOME</a>
   <a href="/about" className="hover:text-yellow-400">ABOUT</a>
+  <a href="/login" className="hover:text-yellow-400">LOGIN</a>
   <a href="/AchievementsTimeline" className="hover:text-yellow-400">ACHIEVEMENTS</a>
   <a href="/shop" className="hover:text-yellow-400">SHOP</a>
   <a href="/4x4x48" className="hover:text-yellow-400">4X4X48</a>
@@ -88,7 +89,6 @@ const ChallengeBanner = () => {
 <h2 className="text-lg md:text-xl font-bold tracking-[0.3em] text-gray-300 mb-4">
   D A V I D&nbsp;&nbsp;G O G G I N S
 </h2>
-
 
 <div className="flex justify-center gap-4 text-xl text-blue-400 mb-6">
   <a href="https://www.instagram.com/davidgoggins/" target="_blank" rel="noreferrer">
@@ -104,7 +104,7 @@ const ChallengeBanner = () => {
 
 
 <div className="text-xs text-gray-400 space-x-2">
-  <span>© 2024 Goggins, LLC. All Rights Reserved. made from react by Shlok Thapa</span>
+  <span>© 2024 Goggins,Made with ❤️& React by Shlok Thapa LLC. All Rights Reserved.</span>
   <span>|</span>
   <a href="/privacy-policy" className="hover:text-yellow-500">Privacy Policy</a>
   <span>|</span>
