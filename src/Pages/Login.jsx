@@ -15,7 +15,8 @@ const Login = () => {
   return (
     <>
     <Navbar/>
-    <div className="relative min-h-screen flex items-center justify-center px-4 bg-black overflow-hidden">
+    <div>
+    <div className=" min-h-screen flex flex-col  items-center justify-center px-4 bg-black overflow-hidden">
       <div
         className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-40 -z-10 min-h-screen"
         style={{
@@ -26,7 +27,8 @@ const Login = () => {
       ></div>
 
       <motion.div
-        className="bg-white/10 backdrop-blur-sm border border-white/20 text-white p-8 rounded-2xl shadow-xl w-full max-w-md"
+     className="bg-white/10 backdrop-blur-sm border border-white/20 text-white p-8 rounded-2xl shadow-xl w-full max-w-md mb-24"
+   
         initial={{ opacity: 0, scale: 0.95, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -93,7 +95,9 @@ const Login = () => {
         </p>
       </motion.div>
 
-      <footer className="bg-black text-white py-12 px-6 text-center border-t border-gray-700">
+    
+    </div>
+    <footer className="bg-black text-white py-12 px-6 text-center border-t border-gray-700">
     
     <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-semibold mb-6">
       <a href="/" className="hover:text-yellow-400">HOME</a>
@@ -125,6 +129,7 @@ const Login = () => {
       <a href="/accessibility" className="hover:text-yellow-500">Accessibility</a>
     </div>
   </footer>
+    
     </div></>
   );
 };
