@@ -1,3 +1,5 @@
+// src/Components/Navbar.jsx
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -8,7 +10,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
+    if (window.scrollY > lastScrollY && window.scrollY > 100) { // Only hide after scrolling down a bit
       setShowNavbar(false);
     } else {
       setShowNavbar(true);
@@ -24,62 +26,60 @@ function Navbar() {
   return (
     <nav
       className={`
-        fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] z-50 
-        bg-white/10 backdrop-blur-lg border border-white/10 shadow-md p-4 
-        rounded-xl text-white transition-transform duration-500 
+        fixed top-0 left-0 w-full z-50  /* --- CHANGE: Standard fixed navbar positioning --- */
+        bg-black/20 backdrop-blur-lg border-b border-white/10 /* --- CHANGE: A cleaner look --- */
+        transition-transform duration-300
         ${showNavbar ? 'translate-y-0' : '-translate-y-full'}
       `}
     >
-      <div className="flex justify-between items-center px-2 md:px-10">
-        <div className="text-xl font-bold text-white">
-        
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* --- CHANGE: Centered container for content --- */}
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0 text-xl font-bold text-white">
+            {/* You can add a logo or brand name here */}
+            <Link to="/">GOGGINS</Link>
+          </div>
 
-     
-        <div className="hidden md:flex space-x-6">
-          {['Home', 'About', 'Login', 'Shop','4X4X48'].map((item) => (
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-6">
+            {['Home', 'About', 'Shop', '4X4X48'].map((item) => (
+              <Link
+                key={item}
+                to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
+                className="relative inline-block text-white hover:text-yellow-400 transition-colors duration-300
+                           before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-0
+                           before:bg-yellow-400 before:transition-all before:duration-300 hover:before:w-full"
+              >
+                {item}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
+              {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'} bg-black/50 backdrop-blur-xl`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+          {['Home', 'About', 'Shop', '4X4X48'].map((item) => (
             <Link
               key={item}
               to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
-              className="relative inline-block text-white hover:text-yellow-400 transition-colors duration-300
-              before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0
-              before:bg-yellow-400 before:transition-all before:duration-300 hover:before:w-full"
+              onClick={() => setMenuOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-400 hover:bg-gray-700"
             >
               {item}
             </Link>
           ))}
         </div>
-
-     
-        <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
-          </button>
-        </div>
-      </div>
-
-     
-      <div
-        className={`
-          flex flex-col items-center overflow-hidden transition-all duration-500 ease-in-out
-          md:hidden
-          ${menuOpen ? 'max-h-60 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4'}
-        `}
-      >
-        {['Home', 'About', 'Login', 'Shop','4X4X48'].map((item) => (
-          <Link
-            key={item}
-            to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
-            onClick={() => setMenuOpen(false)}
-            className="py-2 text-white hover:text-yellow-400 transition-colors duration-300"
-          >
-            {item}
-          </Link>
-        ))}
       </div>
     </nav>
   );
 }
 
 export default Navbar;
-
